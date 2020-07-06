@@ -37,7 +37,7 @@ Then, the classical gradient descent iteration  can be mapped to a quantum versi
 
 where ![](http://latex.codecogs.com/gif.latex?\gamma) is learning rate.
 
-Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can be expressed as 
+Denoting  ![](https://latex.codecogs.com/gif.latex?H^{g}=I-\gamma%20H) and it can be expressed as 
 
 ![](http://latex.codecogs.com/gif.latex?H^{g}=\sum_{i=1}^{M}\beta_{i}H^{g}_{i})
 
