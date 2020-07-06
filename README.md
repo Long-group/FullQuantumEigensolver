@@ -33,9 +33,9 @@ Then, the classical gradient descent iteration  can be mapped to a quantum versi
 where ![](http://latex.codecogs.com/gif.latex?\gamma) is learning rate.
 
 Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can be expressed as 
-![](http://latex.codecogs.com/gif.latex?
-    H^{g}=\sum_{i=1}^{M}\beta_{i}H^{g}_{i},   
-)
+
+![](http://latex.codecogs.com/gif.latex?H^{g}=\sum_{i=1}^{M}\beta_{i}H^{g}_{i})
+
 where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
  
@@ -44,7 +44,7 @@ where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.c
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
 
-After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\langle X|H|X\\rangle) is the corresponding ground state energy.
+After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\\langle X|H|X \\rangle) is the corresponding ground state energy.
  Moreover, by variating the interatomic distances of a molecule, this method can calculate the lowest energy in potential-energy surfaces corresponds to the most stable structure of the molecules.
  
 ## Example
