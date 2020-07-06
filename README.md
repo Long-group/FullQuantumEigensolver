@@ -20,8 +20,8 @@ The gradient descent of *𝑓(X)* can be deviated  as
 =X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
 ![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) )
 At the limit when ε->0 :
-![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) )
-![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=2(δX)^⊤HX )
+![](http://latex.codecogs.com/gif.latex? \frac{d}{d\epsilon}f(X,\epsilon \delta X)=(\delta X)^THX+X^TH(\delta X) )
+![](http://latex.codecogs.com/gif.latex? \frac{d}{d\epsilon}f(X,\epsilon \delta X)=2(\delta X)^THX )
 ![](http://latex.codecogs.com/gif.latex? ∇𝑓(X)=2HX )
 Then, the classical gradient descent iteration  can be mapped to a quantum version by  being regarded as an evolution of *X* under operator *H*,
 ![](http://latex.codecogs.com/gif.latex?
