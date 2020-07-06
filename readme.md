@@ -1,6 +1,6 @@
 
 
-![logo](./logo.png)
+![logo](https://github.com/Long-group/FullQuantumEigensolver/blob/master/logo.PNG)
 > FQE is a quantum algorithm for calculating the ground state energy of a system Hamiltonian, and can be applied to a wide range of fields, such as determining the electronic structure of  fermionic systems, finding the ground energy of  molecules  in quantum chemistry.  For more information, see our release paper.
 
 ## Getting started
@@ -19,7 +19,8 @@ The gradient descent of $𝑓(X)$ can be deviated  as
 $$ 𝑓(X,εδX)=(X+εδX)^⊤H(X+εδX)
 =X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) $$
 $$ \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) $$
-At the limit when ε->0 :$$ \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) $$
+At the limit when ε->0 :
+$$ \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) $$
 $$ \frac{d}{dε}𝑓(X,εδX)=2(δX)^⊤HX $$
 $$ ∇𝑓(X)=2HX $$
 Then, the classical gradient descent iteration  can be mapped to a quantum version by  being regarded as an evolution of $X$ under operator $H$,
@@ -38,7 +39,7 @@ $$
 |X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle=\sum_{i=1}^{M}\beta_iH^{g}_{i}|X^{(t)}\rangle.
 $$
 The above equation can be evaluated by the following quantum circuit
-![circuit](./circuit.png)
+![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
 
 After enough iterative times, $|X\rangle$ will converge to the ground state and $\langle X|H|X\rangle$ is the corresponding ground state energy.
  Moreover, by variating the interatomic distances of a molecule, this method can calculate the lowest energy in potential-energy surfaces corresponds to the most stable structure of the molecules.
