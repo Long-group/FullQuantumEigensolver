@@ -19,7 +19,7 @@ We can calculate the ground state energy by minimizing the expect value of Hamil
 
 The gradient descent of *𝑓(X)* can be deviated as
 
-![](http://latex.codecogs.com/gif.latex? f(X, \epsilon \delta X)=(X+\epsilon \delta X)^TH(X+\epsilon \delta X))
+![](http://latex.codecogs.com/gif.latex? f(X, \\epsilon \\delta X)=(X+\\epsilon \\delta X)^TH(X+ \\epsilon \\delta X))
 
 =X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
 
@@ -39,7 +39,7 @@ Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can b
 where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
  
-![](http://latex.codecogs.com/gif.latex? |X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle =\sum_{i=1}^{M} \beta_iH^{g}_{i}|X^{(t)} \rangle)
+![](http://latex.codecogs.com/gif.latex? |X^{(t+1)}\\rangle=H^{g} |X^{(t)}\\rangle =\sum_{i=1}^{M} \beta_iH^{g}_{i}|X^{(t)} \\rangle)
 
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
