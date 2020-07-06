@@ -10,7 +10,7 @@ Performing FQE requires installing OpenFermion firstly. And, installing OpenFerm
 Full quantum eigensolver (FQE) is an algorithm  to  estimate the ground state of a given Hamiltonian using  quantum gradient descent. We adopt it to calculate the molecular ground energies and electronic structures. We embed this method in Python code and provide a full stack quantum simulation procedure. One feeds a molecule into this program and will obtain an  explicit quantum circuit, and calculating results of the molecular energy of this molecule, and corresponding electronic structures. It can be performed both by  a quantum simulator or a real quantum processor. Compared to existing classical-quantum hybrid methods such as variational quantum eigensolver (VQE), this method removes the classical optimizer and performs all the calculations on a quantum computer.  
 A molecular system, containing a collection of nuclear charges  and  electrons, can be described by a  molecular Hamiltonian. By Jordan-Wigner or Bravyi-Kitaev transformations, the molecular Hamiltonian can be mapped into a qubit Hamiltonian form
 
-![](http://latex.codecogs.com/gif.latex?H=\sum_{i,\alpha}h_{\alpha}^i\sigma_{\alpha}^i+\sum_{i,j,\alpha,\beta}h_{\alpha\beta}^{ij}\sigma_{\alpha}^{i}\sigma_{\beta}^j+\dots)
+![](http://latex.codecogs.com/gif.latex H=\sum_{i,\alpha}h_{\alpha}^i\sigma_{\alpha}^i+\sum_{i,j,\alpha,\beta}h_{\alpha\beta}^{ij}\sigma_{\alpha}^{i}\sigma_{\beta}^j+\dots)
 
 where Roman indices *i*, *j* denote the qubit on which the operator acts, and Greek indices ![](http://latex.codecogs.com/gif.latex?\\alpha), ![](http://latex.codecogs.com/gif.latex?\\beta) refer to  the type of Pauli operators, i.e.,  ![](http://latex.codecogs.com/gif.latex?\sigma^i_{x}) means Pauli matrix ![](http://latex.codecogs.com/gif.latex?\sigma_{x}) acting on a  qubit at site *i*.
 We can calculate the ground state energy by minimizing the expect value of Hamiltonian
@@ -37,7 +37,7 @@ Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can b
 where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
  
-![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle =\sum_{i=1}^{M} \beta_iH^{g}_{i}|X^{(t)} \rangle)
+![](http://latex.codecogs.com/gif.latex? |X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle =\sum_{i=1}^{M} \beta_iH^{g}_{i}|X^{(t)} \rangle)
 
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
