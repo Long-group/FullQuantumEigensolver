@@ -37,12 +37,12 @@ Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can b
 where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
  
-![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle=\sum_{i=1}^{M}\beta_iH^{g}_{i}|X^{(t)}\rangle.)
+![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\\rangle=H^{g} |X^{(t)}\\rangle=\\sum_{i=1}^{M}\\beta_iH^{g}_{i}|X^{(t)}\\rangle.)
 
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
 
-After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\langle X|H|X\rangle) is the corresponding ground state energy.
+After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\langle X|H|X\\rangle) is the corresponding ground state energy.
  Moreover, by variating the interatomic distances of a molecule, this method can calculate the lowest energy in potential-energy surfaces corresponds to the most stable structure of the molecules.
  
 ## Example
