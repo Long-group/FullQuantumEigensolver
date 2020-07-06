@@ -19,8 +19,9 @@ We can calculate the ground state energy by minimizing the expect value of Hamil
 
 The gradient descent of *f(X)* can be deviated as
 
-![](https://latex.codecogs.com/gif.latex?%20f(X,%20\epsilon%20\delta%20X))
-![](https://latex.codecogs.com/gif.latex?=(X+\epsilon%20\delta%20X)^TH(X+%20\epsilon%20\delta%20X)=X^THX+\epsilon%20(\delta%20X)^THX+\epsilon%20X^T%20R%20(\epsilon%20X)+\epsilon^2(\delta%20X)^TH(\delta%20X))
+![](https://latex.codecogs.com/gif.latex?%20f(X,%20\epsilon%20\delta%20X)=(X+\epsilon%20\delta%20X)^TH(X+%20\epsilon%20\delta%20X)=)
+
+![](https://latex.codecogs.com/gif.latex?X^THX+\epsilon%20(\delta%20X)^THX+\epsilon%20X^T%20R%20(\epsilon%20X)+\epsilon^2(\delta%20X)^TH(\delta%20X))
 
 ![](https://latex.codecogs.com/gif.latex?%20\frac{d}{d\epsilon%20}f(X,\epsilon%20\delta%20X)=(\delta%20X)^THX+X^TH(\delta%20X)+2\epsilon%20(\delta%20X)^TH(\epsilon%20X))
 
