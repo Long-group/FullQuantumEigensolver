@@ -17,17 +17,18 @@ We can calculate the ground state energy by minimizing the expect value of Hamil
 
 ![](http://latex.codecogs.com/gif.latex?f(X)=X^THX)
 
-The gradient descent of *𝑓(X)* can be deviated as
+The gradient descent of *f(X)* can be deviated as
 
-![](http://latex.codecogs.com/gif.latex? f(X, \\epsilon \\delta X)=(X+\\epsilon \\delta X)^TH(X+ \\epsilon \\delta X))
+![](https://latex.codecogs.com/gif.latex?%20f(X,%20\epsilon%20\delta%20X)=(X+\epsilon%20\delta%20X)^TH(X+%20\epsilon%20\delta%20X)=X^THX+\epsilon%20(\delta%20X)^THX+\epsilon%20X^T%20R%20(\epsilon%20X)+\epsilon^2(\delta%20X)^TH(\delta%20X))
 
-=X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
-
-![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) )
+![](https://latex.codecogs.com/gif.latex?%20\frac{d}{d\epsilon%20}f(X,\epsilon%20\delta%20X)=(\delta%20X)^THX+X^TH(\delta%20X)+2\epsilon%20(\delta%20X)^TH(\epsilon%20X))
 At the limit when ε->0 :
-![](http://latex.codecogs.com/gif.latex?\frac{d}{d \epsilon}f(X,\epsilon \delta X)=(\delta X)^THX+X^TH(\delta X))
-![](http://latex.codecogs.com/gif.latex? \frac{d}{d\epsilon}f(X,\epsilon \delta X)=2(\delta X)^THX )
-![](http://latex.codecogs.com/gif.latex? ∇𝑓(X)=2HX )
+![](https://latex.codecogs.com/gif.latex?\frac{d}{d%20\epsilon}f(X,\epsilon%20\delta%20X)=(\delta%20X)^THX+X^TH(\delta%20X))
+
+![](https://latex.codecogs.com/gif.latex?%20\frac{d}{d\epsilon}f(X,\epsilon%20\delta%20X)=2(\delta%20X)^THX)
+
+![](https://latex.codecogs.com/gif.latex?%20\nabla%20f(X)=2HX)
+
 Then, the classical gradient descent iteration  can be mapped to a quantum version by  being regarded as an evolution of *X* under operator *H*,
 ![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\rangle= \left ( |X^{(t)}\rangle -\gamma H |X^{(t)}\rangle \right))
 where ![](http://latex.codecogs.com/gif.latex?\gamma) is learning rate.
