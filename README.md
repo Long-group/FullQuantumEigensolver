@@ -11,6 +11,7 @@ Full quantum eigensolver (FQE) is an algorithm  to  estimate the ground state of
 A molecular system, containing a collection of nuclear charges  and  electrons, can be described by a  molecular Hamiltonian. By Jordan-Wigner or Bravyi-Kitaev transformations, the molecular Hamiltonian can be mapped into a qubit Hamiltonian form
 
 ![](http://latex.codecogs.com/gif.latex?H=\sum_{i,\alpha}h_{\alpha}^i\sigma_{\alpha}^i+\sum_{i,j,\alpha,\beta}h_{\alpha\beta}^{ij}\sigma_{\alpha}^{i}\sigma_{\beta}^j+\dots)
+
 where Roman indices *i*, *j* denote the qubit on which the operator acts, and Greek indices ![](http://latex.codecogs.com/gif.latex?\alpha), ![](http://latex.codecogs.com/gif.latex?\beta) refer to  the type of Pauli operators, i.e.,  ![](http://latex.codecogs.com/gif.latex?\sigma^i_{x}) means Pauli matrix ![](http://latex.codecogs.com/gif.latex?\sigma_{x}) acting on a  qubit at site *i*.
 We can calculate the ground state energy by minimizing the expect value of Hamiltonian
 ![](http://latex.codecogs.com/gif.latex? 𝑓(X)=X^⊤HX )
@@ -18,7 +19,7 @@ We can calculate the ground state energy by minimizing the expect value of Hamil
 The gradient descent of *𝑓(X)* can be deviated  as
 ![](http://latex.codecogs.com/gif.latex? 𝑓(X,εδX)=(X+εδX)^⊤H(X+εδX)
 =X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
-![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) )
+![](http://latex.codecogs.com/gif.latex?\frac{d}{dε} 𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX))
 At the limit when ε->0 :
 ![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) )
 ![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=2(δX)^⊤HX )
