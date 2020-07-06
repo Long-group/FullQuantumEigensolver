@@ -44,7 +44,7 @@ where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.c
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
 
-After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\\langle X|H|X \\rangle) is the corresponding ground state energy.
+After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\\rangle) will converge to the ground state and ![](https://latex.codecogs.com/gif.latex?\langle%20X|H|X%20\rangle) is the corresponding ground state energy.
  Moreover, by variating the interatomic distances of a molecule, this method can calculate the lowest energy in potential-energy surfaces corresponds to the most stable structure of the molecules.
  
 ## Example
@@ -70,6 +70,7 @@ In every iteration, the information about the quantum state remained will be out
  
 ## Authors
 ShiJie Wei, Zeng-Rong Zhou
+
 Contact: long_group@163.com
 ## How to cite
 When using FQE for research projects, please cite:
