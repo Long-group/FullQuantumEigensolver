@@ -11,38 +11,37 @@ Full quantum eigensolver (FQE) is an algorithm  to  estimate the ground state of
 A molecular system, containing a collection of nuclear charges  and  electrons, can be described by a  molecular Hamiltonian. By Jordan-Wigner or Bravyi-Kitaev transformations, the molecular Hamiltonian can be mapped into a qubit Hamiltonian form
 
 ![](http://latex.codecogs.com/gif.latex?H=\sum_{i,\alpha}h_{\alpha}^i\sigma_{\alpha}^i+\sum_{i,j,\alpha,\beta}h_{\alpha\beta}^{ij}\sigma_{\alpha}^{i}\sigma_{\beta}^j+\dots)
-$$H=\sum_{i,\alpha}h_{\alpha}^i\sigma_{\alpha}^i+\sum_{i,j,\alpha,\beta}h_{\alpha\beta}^{ij}\sigma_{\alpha}^{i}\sigma_{\beta}^j+\dots$$
-where Roman indices $i, j$ denote the qubit on which the operator acts, and Greek indices $\alpha, \beta$ refer to  the type of Pauli operators, i.e.,  $\sigma^i_{x}$ means Pauli matrix $\sigma_{x}$ acting on a  qubit at site $i$.
+where Roman indices *i*, *j* denote the qubit on which the operator acts, and Greek indices ![](http://latex.codecogs.com/gif.latex?\alpha), ![](http://latex.codecogs.com/gif.latex?\beta) refer to  the type of Pauli operators, i.e.,  ![](http://latex.codecogs.com/gif.latex?\sigma^i_{x}) means Pauli matrix ![](http://latex.codecogs.com/gif.latex?\sigma_{x}) acting on a  qubit at site *i*.
 We can calculate the ground state energy by minimizing the expect value of Hamiltonian
-$$ 𝑓(X)=X^⊤HX $$
+![](http://latex.codecogs.com/gif.latex? 𝑓(X)=X^⊤HX )
 
-The gradient descent of $𝑓(X)$ can be deviated  as
-$$ 𝑓(X,εδX)=(X+εδX)^⊤H(X+εδX)
-=X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) $$
-$$ \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) $$
+The gradient descent of *𝑓(X)* can be deviated  as
+![](http://latex.codecogs.com/gif.latex? 𝑓(X,εδX)=(X+εδX)^⊤H(X+εδX)
+=X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
+![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) )
 At the limit when ε->0 :
-$$ \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) $$
-$$ \frac{d}{dε}𝑓(X,εδX)=2(δX)^⊤HX $$
-$$ ∇𝑓(X)=2HX $$
-Then, the classical gradient descent iteration  can be mapped to a quantum version by  being regarded as an evolution of $X$ under operator $H$,
-$$
+![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX) )
+![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=2(δX)^⊤HX )
+![](http://latex.codecogs.com/gif.latex? ∇𝑓(X)=2HX )
+Then, the classical gradient descent iteration  can be mapped to a quantum version by  being regarded as an evolution of *X* under operator *H*,
+![](http://latex.codecogs.com/gif.latex?
 |X^{(t+1)}\rangle= \left ( |X^{(t)}\rangle -\gamma H |X^{(t)}\rangle \right),
-$$ 
-where $\gamma$ is learning rate.
+)
+where ![](http://latex.codecogs.com/gif.latex?\gamma) is learning rate.
 
-Denoting  $H^{g}=I-\gamma H$ and it can be expressed as 
-$$
+Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can be expressed as 
+![](http://latex.codecogs.com/gif.latex?
     H^{g}=\sum_{i=1}^{M}\beta_{i}H^{g}_{i},   
-$$
-where  $M$ is the number of Pauli product terms  in  $H^{g} $. 
+)
+where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
-$$
+![](http://latex.codecogs.com/gif.latex?
 |X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle=\sum_{i=1}^{M}\beta_iH^{g}_{i}|X^{(t)}\rangle.
-$$
+)
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
 
-After enough iterative times, $|X\rangle$ will converge to the ground state and $\langle X|H|X\rangle$ is the corresponding ground state energy.
+After enough iterative times, ![](http://latex.codecogs.com/gif.latex?|X\rangle) will converge to the ground state and ![](http://latex.codecogs.com/gif.latex?\langle X|H|X\rangle) is the corresponding ground state energy.
  Moreover, by variating the interatomic distances of a molecule, this method can calculate the lowest energy in potential-energy surfaces corresponds to the most stable structure of the molecules.
  
 ## Example
