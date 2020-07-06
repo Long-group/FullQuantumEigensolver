@@ -37,7 +37,7 @@ Denoting  ![](http://latex.codecogs.com/gif.latex?H^{g}=I-\gamma H) and it can b
 where  *M* is the number of Pauli product terms  in  ![](http://latex.codecogs.com/gif.latex?H^{g} ). 
  Then the gradient descent process can be rewritten as 
  
-![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\\rangle=H^{g} |X^{(t)}\\rangle=\\sum_{i=1}^{M}\\beta_iH^{g}_{i}|X^{(t)}\\rangle.)
+![](http://latex.codecogs.com/gif.latex?|X^{(t+1)}\rangle=H^{g} |X^{(t)}\rangle =\sum_{i=1}^{M} \beta_iH^{g}_{i}|X^{(t)} \rangle)
 
 The above equation can be evaluated by the following quantum circuit
 ![circuit](https://github.com/Long-group/FullQuantumEigensolver/blob/master/circuit.PNG)
