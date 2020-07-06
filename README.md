@@ -14,11 +14,15 @@ A molecular system, containing a collection of nuclear charges  and  electrons, 
 
 where Roman indices *i*, *j* denote the qubit on which the operator acts, and Greek indices ![](http://latex.codecogs.com/gif.latex?\\alpha), ![](http://latex.codecogs.com/gif.latex?\\beta) refer to  the type of Pauli operators, i.e.,  ![](http://latex.codecogs.com/gif.latex?\sigma^i_{x}) means Pauli matrix ![](http://latex.codecogs.com/gif.latex?\sigma_{x}) acting on a  qubit at site *i*.
 We can calculate the ground state energy by minimizing the expect value of Hamiltonian
+
 ![](http://latex.codecogs.com/gif.latex?f(X)=X^THX)
 
-The gradient descent of *𝑓(X)* can be deviated  as
+The gradient descent of *𝑓(X)* can be deviated as
+
 ![](http://latex.codecogs.com/gif.latex? f(X, \epsilon \delta X)=(X+\epsilon \delta X)^TH(X+\epsilon \delta X)
+
 =X^⊤HX+ε(δX)^⊤HX+εX^⊤𝑅(δX)+ε^2(δX)^⊤H(δX) )
+
 ![](http://latex.codecogs.com/gif.latex? \frac{d}{dε}𝑓(X,εδX)=(δX)^⊤HX+X^⊤H(δX)+2ε(δX)^⊤H(δX) )
 At the limit when ε->0 :
 ![](http://latex.codecogs.com/gif.latex?\frac{d}{d \epsilon}f(X,\epsilon \delta X)=(\delta X)^THX+X^TH(\delta X))
