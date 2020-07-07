@@ -75,7 +75,7 @@ In every iteration, the information about the quantum state remained will be out
 
  
 ## Authors
-ShiJie Wei, Zeng-Rong Zhou, GuiLu Long
+GuiLu Long, ShiJie Wei, Zeng-Rong Zhou
 
 Contact: long_group@163.com
 
